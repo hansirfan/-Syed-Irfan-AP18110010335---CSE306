@@ -1,0 +1,92 @@
+# Career-Ops Profile — Syed Irfan
+# India Job Search Configuration — PM / CS / IM Roles
+
+candidate:
+  full_name: "Syed Irfan"
+  email: "isyed9233@gmail.com"
+  phone: "+91 83096 72283"
+  location: "Bengaluru, India"
+  linkedin: "linkedin.com/in/syed-irfan-056b69197"
+  portfolio_url: "https://syed-portfolio-eta.vercel.app/"
+  github: ""
+  twitter: ""
+
+target_roles:
+  primary:
+    - "Product Manager"
+    - "Customer Success Manager"
+    - "Implementation Manager"
+  archetypes:
+    - name: "Product Manager"
+      level: "Mid-Senior"
+      fit: "primary"
+    - name: "Customer Success Manager"
+      level: "Senior"
+      fit: "primary"
+    - name: "Implementation Manager"
+      level: "Mid-Senior"
+      fit: "primary"
+    - name: "Technical Account Manager"
+      level: "Senior"
+      fit: "secondary"
+    - name: "Solutions Consultant"
+      level: "Senior"
+      fit: "secondary"
+
+narrative:
+  headline: "Enterprise SaaS professional turning customer friction into product wins — 4 years at Whatfix"
+  exit_story: "4 years driving digital adoption across 35+ enterprise accounts at a high-growth SaaS company. Built AI-first tools outside of work. Now targeting PM, CS, and IM roles where I can own the full product-customer loop."
+  superpowers:
+    - "Enterprise platform expertise (Salesforce, Workday, SAP, ServiceNow) — I speak the same language as clients"
+    - "Translating user research into roadmap inputs and measurable KPIs"
+    - "Building AI-powered tools from zero to live product"
+    - "100% client retention across 35+ accounts over 4 years"
+    - "$480K incremental ARR via cross-functional diagnostics framework"
+  proof_points:
+    - name: "Namma Garage"
+      url: "https://syed-portfolio-eta.vercel.app/"
+      hero_metric: "Offline-first Android app for Indian mechanics — invoicing in under 2 min"
+    - name: "Track Pharma"
+      url: "https://syed-portfolio-eta.vercel.app/"
+      hero_metric: "AI medication tracker with contraindication flagging and health trend summaries"
+    - name: "Whatfix AI Playbook"
+      url: ""
+      hero_metric: "Company-wide AI governance document — adopted org-wide as standard"
+    - name: "Cross-Functional Diagnostics Framework"
+      url: ""
+      hero_metric: "$480K incremental ARR, directly informed product roadmap"
+
+compensation:
+  current_ctc: "19 LPA"
+  target_range: "30-50 LPA"
+  currency: "INR"
+  minimum: "28 LPA"
+  expected_hike: "58-163% — justified by 4 years enterprise SaaS, $480K ARR impact, 100% retention"
+  location_flexibility: "Remote India preferred; open to Bengaluru, Hyderabad, Gurgaon hybrid"
+
+availability:
+  notice_period: "Already serving notice"
+  joining: "Immediate to 30 days"
+
+location:
+  country: "India"
+  cities:
+    primary: "Remote (India)"
+    acceptable:
+      - "Bengaluru"
+      - "Hyderabad"
+      - "Gurgaon"
+  timezone: "IST"
+  visa_status: "Indian citizen — no sponsorship needed"
+  work_mode: "Remote-first preferred; hybrid acceptable for Bengaluru; full on-site only if role is exceptional"
+
+search_config:
+  active: true
+  started: "2026-04-15"
+  target_companies:
+    stage: ["Series B+", "Growth", "Enterprise"]
+    sectors: ["SaaS", "FinTech", "HealthTech", "B2B"]
+  deal_breakers:
+    - "Full-time on-site in a city outside Bengaluru/Hyderabad/Gurgaon"
+    - "Below 28 LPA fixed"
+    - "No product/CS ownership — pure support/ops role"

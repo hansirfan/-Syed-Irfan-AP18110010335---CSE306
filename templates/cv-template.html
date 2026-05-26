@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Syed Irfan - Resume</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 9pt;
+      line-height: 1.38;
+      color: #111;
+      background: #fff;
+      padding: 16px 32px;
+      max-width: 790px;
+      margin: 0 auto;
+    }
+
+    /* ── HEADER ── */
+    .name {
+      font-size: 19pt;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      color: #000;
+      text-align: center;
+      margin-bottom: 3px;
+    }
+
+    .contact-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2px 12px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 8pt;
+      color: #333;
+      margin-bottom: 8px;
+      align-items: center;
+    }
+
+    .contact-row a { color: #333; text-decoration: none; }
+    .sep { color: #bbb; }
+
+    .icon-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .icon-link svg { width: 10px; height: 10px; opacity: 0.7; flex-shrink: 0; }
+
+    /* ── SECTIONS ── */
+    .section { margin-bottom: 7px; }
+
+    .section-head {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 7.5pt;
+      font-weight: 700;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      color: #000;
+      border-bottom: 1.5px solid #000;
+      padding-bottom: 2px;
+      margin-bottom: 5px;
+    }
+
+    /* ── SUMMARY ── */
+    .summary {
+      font-size: 9pt;
+      color: #222;
+      line-height: 1.42;
+      text-align: justify;
+      margin-bottom: 6px;
+    }
+
+    /* ── PLATFORM BADGES ── */
+    .plat-label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 7pt;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 3px;
+    }
+
+    .platform-grid { display: flex; flex-wrap: wrap; gap: 2px; }
+
+    .badge {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 7.3pt;
+      font-weight: 500;
+      padding: 1.5px 7px;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+
+    .badge-crm  { background:#eef2fb; color:#1a3f8f; border:1px solid #c0cef0; }
+    .badge-erp  { background:#fff4e6; color:#a04800; border:1px solid #f5c88a; }
+    .badge-hcm  { background:#edf7ed; color:#1e5c1e; border:1px solid #9fd09f; }
+    .badge-clm  { background:#f5eefb; color:#5c1a96; border:1px solid #c8a0e8; }
+    .badge-ins  { background:#fdeaea; color:#961a1a; border:1px solid #eba8a8; }
+    .badge-ls   { background:#eafaf3; color:#1a5c40; border:1px solid #8ed4b8; }
+    .badge-eam  { background:#f7f2ea; color:#5c3e0a; border:1px solid #d4b880; }
+    .badge-scm  { background:#eaeefc; color:#1a2d6e; border:1px solid #96aadc; }
+    .badge-itsm { background:#f2f2f2; color:#2a2a2a; border:1px solid #c0c0c0; }
+    .badge-bi   { background:#fffbea; color:#6e4a00; border:1px solid #e8cc70; }
+
+    /* ── EXPERIENCE ── */
+    .role-block { margin-bottom: 6px; }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .role-title {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 10pt;
+      font-weight: 700;
+      color: #000;
+    }
+
+    .role-dates {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 8.5pt;
+      color: #555;
+      font-style: italic;
+    }
+
+    .role-org {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 8.2pt;
+      font-weight: 600;
+      color: #333;
+      font-style: italic;
+      margin-bottom: 1px;
+    }
+
+    .role-platforms {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 7.3pt;
+      color: #444;
+      font-style: italic;
+      margin-bottom: 2px;
+    }
+
+    .role-platforms b { font-style: normal; font-weight: 700; color: #222; }
+
+    ul { padding-left: 13px; }
+    ul li { font-size: 9pt; margin-bottom: 1.5px; line-height: 1.38; }
+
+    hr.div { border: none; border-top: 0.5px solid #ddd; margin: 4px 0; }
+
+    /* ── SKILLS ── */
+    .skill-row { font-size: 8.8pt; margin-bottom: 1px; }
+    .skill-row b { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 7.5pt; font-weight: 700; }
+
+    /* ── PROJECTS ── */
+    .project-block { margin-bottom: 5px; }
+
+    .project-title-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 1px;
+    }
+
+    .project-title {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 9.8pt;
+      font-weight: 700;
+      color: #000;
+    }
+
+    .proj-icon-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 7.5pt;
+      color: #555;
+      text-decoration: none;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      padding: 1px 5px;
+    }
+
+    .proj-icon-link svg { width: 10px; height: 10px; }
+
+    .project-stack {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 7.3pt;
+      color: #444;
+      font-style: italic;
+      margin-bottom: 1px;
+    }
+
+    .project-stack b { font-style: normal; font-weight: 700; color: #222; }
+    .project-desc { font-size: 8.8pt; color: #222; line-height: 1.38; }
+
+    /* ── EDUCATION ── */
+    .edu-row { display: flex; justify-content: space-between; align-items: baseline; }
+    .edu-deg { font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 9pt; }
+    .edu-notes { font-size: 8.5pt; color: #444; font-style: italic; margin-top: 0; }
+
+    /* ── CREDENTIAL BADGES ── */
+    .cred-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin-top: 2px;
+    }
+
+    .cred-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      text-decoration: none;
+    }
+
+    .cred-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 8pt;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #fff;
+    }
+
+    .cred-name {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 6.8pt;
+      color: #333;
+      text-align: center;
+      max-width: 52px;
+      line-height: 1.3;
+    }
+
+    .cred-pmp    { background: linear-gradient(135deg, #003087, #0055b3); }
+    .cred-sf     { background: linear-gradient(135deg, #009edb, #00a1e0); }
+    .cred-wd     { background: linear-gradient(135deg, #f5821e, #e07000); }
+    .cred-pendo  { background: linear-gradient(135deg, #6b3fa0, #8b4fcf); }
+    .cred-fe     { background: linear-gradient(135deg, #e34c26, #f1502f); }
+
+    @media print {
+      body { padding: 0; }
+      @page { margin: 9mm 10mm; size: A4; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="name">Syed Irfan</div>
+<div style="text-align:center; font-family:'Helvetica Neue',Arial,sans-serif; font-size:8.8pt; color:#555; letter-spacing:1px; margin-bottom:5px;">{{ROLE_LINE}}</div>
+<div class="contact-row">
+  <span>isyed9233@gmail.com</span>
+  <span class="sep">|</span>
+  <span>+91 83096 72283</span>
+  <span class="sep">|</span>
+  <span>Bengaluru, India</span>
+  <span class="sep">|</span>
+  <a class="icon-link" href="https://syed-portfolio-eta.vercel.app/">
+    <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16A8 8 0 0010 2zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"/></svg>
+    Portfolio
+  </a>
+  <span class="sep">|</span>
+  <a class="icon-link" href="https://linkedin.com/in/syed-irfan-056b69197">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    LinkedIn
+  </a>
+</div>
+
+<!-- PROFILE -->
+<div class="section">
+  <div class="section-head">Profile</div>
+  <div class="summary">{{SUMMARY}}</div>
+  <div class="plat-label" style="margin-top:6px;">Platform Expertise</div>
+  <div class="platform-grid">
+    {{PLATFORM_BADGES}}
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="section">
+  <div class="section-head">Experience</div>
+
+  <div class="role-block">
+    <div class="role-header">
+      <span class="role-title">Product Consultant II, Digital Adoption</span>
+      <span class="role-dates">Feb 2022 – Present</span>
+    </div>
+    <div class="role-org">Whatfix &nbsp;·&nbsp; Bengaluru &nbsp;·&nbsp; NA &amp; EMEA</div>
+    <div class="role-platforms"><b>Platforms:</b> {{PLATFORMS_LINE}}</div>
+    <ul>
+      {{EXPERIENCE_BULLETS}}
+    </ul>
+  </div>
+
+  <hr class="div">
+
+  <div class="role-block">
+    <div class="role-header">
+      <span class="role-title">Business Analyst Intern, PMO</span>
+      <span class="role-dates">Jan – Dec 2021</span>
+    </div>
+    <div class="role-org">Puyenpa Services LLC</div>
+    <ul>
+      <li>Overhauled 20+ SOPs ensuring full HR regulatory compliance; facilitated bi-weekly PMO calls with 15+ stakeholders and published weekly Status, Compliance, and Resource Utilisation reports, cutting timelines by 15%.</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+  <div class="section-head">Skills</div>
+  {{SKILLS_SECTION}}
+</div>
+
+<!-- PROJECTS -->
+<div class="section">
+  <div class="section-head">Projects</div>
+
+  <div class="project-block">
+    <div class="project-title-row">
+      <span class="project-title">Namma Garage</span>
+      <a class="proj-icon-link" href="https://github.com/hansirfan/Namma-Garage" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a class="proj-icon-link" href="https://syed-portfolio-eta.vercel.app/" target="_blank">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16A8 8 0 0010 2zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"/></svg>
+        Live
+      </a>
+    </div>
+    <div class="project-stack"><b>Stack:</b> React Native &middot; Android &middot; WhatsApp Business API &middot; Offline-first &middot; English &amp; Kannada</div>
+    <div class="project-desc">Built around a user research insight from mechanic interviews: a garage owner must generate their first invoice in under 2 minutes or they disengage permanently. Generates GST-compliant invoices, manages parts inventory, auto-fills returning customers, delivers invoices via WhatsApp, and includes a live revenue dashboard with 7-day earnings chart. Runs fully offline. Available in English and Kannada.</div>
+  </div>
+
+  <div class="project-block">
+    <div class="project-title-row">
+      <span class="project-title">Track Pharma</span>
+      <a class="proj-icon-link" href="https://syed-portfolio-eta.vercel.app/" target="_blank">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16A8 8 0 0010 2zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"/></svg>
+        Live
+      </a>
+    </div>
+    <div class="project-stack"><b>Stack:</b> Flutter &middot; Deep learning model &middot; Medication research &amp; clinical case study dataset</div>
+    <div class="project-desc">Flutter app with an embedded deep learning model trained on clinical case studies. Tracks daily intake, cross-references against a research-backed dataset of side effects, food interactions, and contraindications - generating plain-language health trend summaries over time.</div>
+  </div>
+</div>
+
+<!-- EDUCATION -->
+<div class="section">
+  <div class="section-head">Education</div>
+  <div class="edu-row">
+    <span class="edu-deg">B.Tech, Computer Science &mdash; SRM University</span>
+    <span class="role-dates" style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:8.5pt;color:#555;font-style:italic;">Graduated 2022</span>
+  </div>
+  <div class="edu-notes">Minor in Statistics &nbsp;&middot;&nbsp; Teaching Assistant</div>
+</div>
+
+<!-- CERTIFICATIONS (optional, shown when space allows) -->
+{{CERTIFICATIONS_SECTION}}
+
+</body>
+</html>
